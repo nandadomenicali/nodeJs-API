@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-api",
+  "name": "projeto-nodejs-rest",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,19 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nandadomenicali/nodeJs-API.git"
+    "url": "git+https://github.com/juunegreiros/nodejs-api-rest.git"
   },
-  "author": "FernandaDomenicali",
+  "author": "juliana negreiros",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nandadomenicali/nodeJs-API/issues"
+    "url": "https://github.com/juunegreiros/nodejs-api-rest/issues"
   },
-  "homepage": "https://github.com/nandadomenicali/nodeJs-API#readme",
+  "homepage": "https://github.com/juunegreiros/nodejs-api-rest#readme",
   "dependencies": {
     "consign": "^0.1.6",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^1.19.4"
   }
 }
