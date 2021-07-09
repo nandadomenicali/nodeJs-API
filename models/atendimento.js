@@ -33,11 +33,11 @@ class Atendimento{
 
             const sql  = 'INSERT INTO Atendimentos SET ?'
 
-            conexao.query(sql, atendimentoDatado, (erro, resultados) => {
+            conexao.query(sql, atendimentoDatado, (erro) => {
                 if(erro){
                     res.status(400).json(erro)
                 }else{
-                    res.status(201).json(resultados) 
+                    res.status(201).json(atendimento) 
                 }
             }) 
         }  
@@ -48,7 +48,7 @@ class Atendimento{
     lista(res){
         const sql = 'SELECT * FROM Atendimentos'
 
-        conexao.query(sql, (erro) => {
+        conexao.query(sql, (erro, resultados) => {
             if(erro){ 
                 res.status(400).json(erro)
             }else{
@@ -76,14 +76,26 @@ class Atendimento{
          }
         const sql = 'UPDATE Atendimentos SET ? WHERE id=?'
 
-        conexao.query(sql, [valores, id], (erro, resultados) => {
+        conexao.query(sql, [valores, id], (erro) => {
             if(erro){
               res.status(400).json(erro)
             }else{
-              res.status(200).json(resultados)  
+              res.status(200).json({...valores, id})  
             }
         }) 
          
+    }
+
+    deleta(id, res){
+        const sql = 'DELETE FROM Atendimentos WHERE id=?'
+
+        conexao.query(sql, (erro, resultados) => {
+            if(erro){
+                res.status(400).json(erro)
+            }else{
+                res.status(200).json({id})      
+            }
+        })
     }
 }   
 
