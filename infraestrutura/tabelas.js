@@ -15,7 +15,7 @@ class Tabelas {
                 console.log('tabela criada com sucesso')                                 
             }
 
-        }) 
+        })  
     }
 
 }
