@@ -12,10 +12,10 @@ class Tabelas {
             if(erro) {
                 console.log(erro)
             }else {
-                console.log('tabela criada com sucesso')
+                console.log('tabela criada com sucesso')                                 
             }
 
-        })
+        }) 
     }
 
 }
