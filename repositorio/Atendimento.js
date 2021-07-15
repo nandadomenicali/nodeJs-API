@@ -6,6 +6,12 @@ class Atendimento{
         return query(sql, atendimento)
     }
 
+    lista(){
+        const sql = 'SELECT * FROM Atendimentos'  
+
+        return query(sql)
+    }
+
 }
 
 module.exports = new Atendimento()
