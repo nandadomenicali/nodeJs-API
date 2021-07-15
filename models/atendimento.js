@@ -36,7 +36,7 @@ class Atendimento{
         const data = moment(atendimento.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH:MM:ss')
    
         const parametros = {
-            data: {data, dataCriacao},
+            data: {data, dataCriacao}, 
             cliente: {tamanho: atendimento.cliente.length}
         }
 
